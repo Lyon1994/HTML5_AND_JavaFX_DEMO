@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>e掌柜-智慧餐饮-餐饮c2b-餐饮o2o-互联网+，国内首个智慧餐饮C2B+O2O解决方案，打造移动互联网+智能餐厅。核心产品e掌柜智慧餐饮管理系统、凑凑用户移动平台为餐饮行业提供全能解决方案。</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link type="text/css" rel="stylesheet" href="css/main.css">
+<style>
+* { margin: 0; padding: 0;}
+body { font: 16px/1.8 "Microsoft Yahei",verdana;}
+
+/* 右侧导航 */
+#fullPage-nav { _display: none; font-size: 12px;}
+#fullPage-nav li { width: 90px; height: 21px; margin: 10px 0 0; vertical-align: middle;}
+#fullPage-nav li a { float: right; width: 21px; height: 21px; color: #8F9DA4; text-decoration: none; text-align: right; background: url(images/dot.png) 5px 5px no-repeat;}
+#fullPage-nav li .active { background-position: 0 bottom;}
+#fullPage-nav span { display: none;}
+.fullPage-tooltip { float: left; top: 0; margin-right: 5px; font: 12px "Microsoft Yahei"; color: #8F9DA4; line-height: 21px;}
+
+.section { position: relative; overflow: hidden;}
+.section .bg { position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.section .bg img { display: block; width: 100%; height: 100%;}
+
+.bg11 { position: absolute; bottom: 0; width: 100%; height: 850px; background: url(images/bg11.png) 50% 0 no-repeat; transition: all 1s;}
+.bg12 { position: absolute; top:35%; width: 100%; height: 390px; background: url(images/bg12.png) 50% 0 no-repeat; opacity: 0; transition: all 1.7s; bottom: 90px\0;z-index:101;}
+.bg13 { position: absolute; bottom: -377px; width: 100%; height: 377px; background: url(images/bg13.png) 50% 0 no-repeat; transition: all 1s;z-index:100;}
+.hgroup { position: absolute; width: 554px; height: 176px; left: 50%; top: 5%; margin: 0 0 0 -277px; text-indent: -9999px; background-image: url(images/slogan.png); opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+.p11 { position: absolute; left: 50%; top: 50%; width: 600px; margin: 0 0 0 -280px; font-size: 14px; color: #94a7c6; opacity: 0; transition: all 0.5s;}
+.mail { position: absolute; left: 50%; top: -26px; width: 375px; height: 26px; margin-left: -187px; background-image: url(images/logo.png); transition: all 1s;}
+.mail { float: left; height: 26px; text-indent: -9999px;}
+.mail-163 { float: left; width: 107px;}
+.mail-126 { float: left;width: 108px; margin-left: 23px;}
+.mail-yeah { float: right; width: 115px;}
+
+.bg21 { position: absolute; left: 50%; bottom: 15%; width: 819px; height: 250px; margin-left: -608px; margin-bottom: 40px; background: url(images/bg21.png) 0 0 no-repeat; transition: all 1s;  opacity: 0; margin-left: -1108px;}
+.bg22 { position: absolute; left: 50%; bottom: 15%; width: 819px; height: 299px; margin-left: -280px; margin-bottom: 70px; background: url(images/bg22.png) right 0 no-repeat; transition: all 1s; opacity: 0; margin-left: 320px;}
+.bg23 { position: absolute; left: 50%; width: 819px; height: 325px; margin-left: -409px; background: url(images/bg23.png) 50% 0 no-repeat; transition: all 1s;  top:40%;}
+.section strong { position: absolute; left: 46%; top: 2%; z-index: 10; width: 512px; height: 45px; margin-left: -256px; font-size: 24px; font-weight: 500; color: #748A9E; opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+.section h3 { position: absolute; left: 46%; top: 2%; z-index: 10; width: 512px; height: 45px; margin-left: -256px; margin-top: 60px; text-indent: -9999px; background-repeat: no-repeat; opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+.p1 { position: absolute; left: 46%; top: -1%; width: 510px; margin-left: -255px; margin-top: 130px; font-size: 16px; color: #727F8C; opacity: 0; transition: all 1s;}
+
+.section2 h3 { background-image: url(images/t2.png);}
+.section3 h3 { background-image: url(images/t3.png);}
+.section4 h3 { background-image: url(images/t4.png);}
+.section5 h3 { background-image: url(images/t5.png);}
+.section6 strong { width: 561px; margin-left: -280px;}
+.section6 h3 { width: 561px; margin-left: -280px; background-image: url(images/t6.png);}
+.section7 strong { width: 561px; margin-left: -280px;}
+.section7 h3 { width: 561px; margin-left: -280px; background-image: url(images/t7.png);}
+.section8 strong { width: 561px; margin-left: -280px;}
+.section8 h3 { width: 561px; margin-left: -280px; background-image: url(images/t8.png);}
+.section9 strong { width: 609px; margin-left: -304px;}
+.section9 h3 { width: 609px; margin-left: -304px; background-image: url(images/t9.png);}
+.section9 h3 span { position: absolute; left: -100px; top: -48px; width: 89px; height: 90px; background-image: url(images/yixin.png);}
+
+.bg31 { position: absolute; left: 50%; bottom: 0; width: 892px; height: 472px; margin-left: -396px; margin-bottom: 80px; background-image: url(images/bg31.png); opacity: 0; transition: all 1s;}
+.bg32 { position: absolute; left: 50%; bottom: 0; width: 892px; height: 472px; margin-left: -396px; background: url(images/bg32.png) 470px bottom no-repeat; opacity: 0; transition: all 1s;}
+.bg33 { position: absolute; left: 10%; bottom: 0; width: 890px; height: 380px; margin-left: 50%; background: url(images/bg33.png) 0 0 no-repeat; opacity: 0; transition: all 1s;}
+.p3 { position: absolute; width: 430px; left: 43%; top: 13%; margin-top: 120px; margin-left: -100%; font-size: 16px; color: #FFFDE1; opacity: 0; transition: all 1s;}
+
+.bg41 { position: absolute; bottom: -372px; width: 100%; height: 372px; background: url(images/bg41.png) 50% 0 no-repeat; transition: all 1s;}
+.bg42 { position: absolute; bottom: 0px; width: 100%; height: auto; background: url(images/bg42.png) 50% 0 no-repeat; transition: all 1s;}
+.bg43 { position: absolute; bottom: -449px; width: 100%; height: 449px; margin-bottom: -130px; background: url(images/bg43.png) 50% 0 no-repeat; transition: all 1s;}
+
+.bg51, .bg52, .bg53, .bg54 { position: absolute; z-index: 1; width: 208px; left: 50%; bottom: 20%; padding-top: 210px; color: #fff;}
+.section5 h4 { margin-bottom: 12px; font-size: 23px; font-weight: 500;}
+.section5 p { font-size: 14px;}
+.bg51 { margin-left: -851px; background: url(images/bg51.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+.bg52 { margin-left: -403px; background: url(images/bg52.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+.bg53 { margin-left: 195px; background: url(images/bg53.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+.bg54 { margin-left: 645px; background: url(images/bg54.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+
+.bg61 { position: absolute; top: -454px; width: 100%; height: 545px; background: url(images/bg61.png) 50% 0 no-repeat; transition: all 1s;}
+.bg62 { position: absolute; left: 10%; bottom: 20%; width: 597px; height: 284px; margin-left: -507px; background-image: url(images/bg62.png); transition: all 1s;}
+.txt6 { position: absolute; left: 90%; bottom: 20%; width: 447px; margin-left: 90px; opacity: 0; transition: all 1s;}
+.txt6 p { margin-bottom: 17px; color: #5C7970;}
+
+.bg71 { position: absolute; left: 50%; bottom: -201px; width: 699px; height: 201px; margin-left: -630px; background: url(images/bg71.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+.bg72 { position: absolute; left: 50%; bottom: -206px; width: 182px; height: 206px; margin-left: -170px; background: url(images/bg72.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+.bg73 { position: absolute; left: 50%; bottom: 170px; width: 651px; height: 231px; margin-left: -530px; background: url(images/bg73.png) 50% 0 no-repeat;}
+.bg74 { position: absolute; left: 0; bottom: 0; width: 100%; height: 100%;}
+.bg74 img { position: absolute; left: 0; bottom: 0; width: 100%; height: 251px;}
+.txt7 { position: absolute; left: 50%; bottom: -150px; width: 420px; margin-left: 100px; opacity: 0; transition: all 1s;}
+.txt7 p { margin-bottom: 0px; color: #EAEFF2;}
+
+.bg81 { position: absolute; width: 100%; bottom: 100px; height: 215px; background: url(images/bg81.png) 50% 0 no-repeat;}
+.bg82 { position: absolute; left: 50%; bottom: 160px; width: 164px; height: 117px; margin-left: -180px; background-image: url(images/bg82.png); opacity: 0; transition: all 1s;}
+.bg83 { position: absolute; left: 50%; bottom: 280px; width: 70px; height: 29px; margin-left: -330px; background-image: url(images/bg83.png); opacity: 0; transition: all 1s;}
+.bg84 { position: absolute; left: 50%; bottom: 320px; width: 43px; height: 26px; margin-left: -410px; background-image: url(images/bg84.png); opacity: 0; transition: all 1s;}
+.p8 { position: absolute; left: 50%; top: 15%; width: 565px; margin-left: -282px; margin-top: 130px; font-size: 16px; color: #727F8C; opacity: 0; transition: all 1s;}
+
+.bg91, .bg92, .bg93 { padding-top: 350px; font-size: 16px; color: #fff;}
+.bg91 { position: absolute; left: 50%; bottom: 15%; width: 340px; margin-left: -970px; background: url(images/bg91.png) 0 0 no-repeat; opacity: 0; transition: all 1s;}
+.bg91 p { position: relative; left: 20px; margin-left: 40px; border-right: 1px solid #13AB86;}
+.bg92 { position: absolute; left: 50%; bottom: 15%; width: 340px; margin-left: -240px; background: url(images/bg92.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+.bg92 p { position: relative; left: 40px; margin-left: 30px;}
+.bg93 { position: absolute; left: 47%; bottom: 15%; width: 340px; margin-left: 630px; background: url(images/bg93.png) 50% 0 no-repeat; opacity: 0; transition: all 1s;}
+.bg93 p { position: relative; left: -20px; padding-left: 40px; border-left: 1px solid #13AB86;}
+
+.bg101 { position: absolute; width: 100%; height: 100%; background: url(images/bg101.png) 50% 20% no-repeat;}
+.bg102 { position: absolute; width: 100%; top: 25%; height: 79px; background: url(images/bg102.png) 50% 0 no-repeat; opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+.bg103 { position: absolute; width: 100%; top: 25%; height: 37px; margin-top: 110px; background: url(images/bg103.png) 50% 0 no-repeat; opacity: 0; -webkit-transform:scale(0.5, 0.5); transform:scale(0.5, 0.5); transition: all 1s;}
+.go { position: absolute; left: 50%; top: 55%; width: 254px; height: 70px; margin-top: 220px; margin-left: -127px; text-indent: -9999px; background-image: url(images/btn.png); opacity: 0; transition: all 1s;}
+
+.copyright { position: absolute; left: 0; bottom: 20px; width: 100%; text-align: center; font-size: 0;}
+.copyright a, .copyright span { margin: 0 7px; font-size: 12px; color: #a0a0a0;}
+
+/* CSS3过度及动画 */
+.active strong, .active h3 { opacity: 1; -webkit-transform:scale(1, 1); transform:scale(1, 1); transition-delay: 0.7s;}
+.active .p1 { opacity: 1; transition-delay: 1.7s;}
+
+.active .bg12 { bottom: 90px; opacity: 1; transition-delay: 0.7s; }
+.active .bg13 { bottom: 0; opacity: 1; transition-delay: 0.7s;}
+.active .hgroup { opacity: 1; -webkit-transform:scale(1, 1); transform:scale(1, 1); transition-delay: 0.7s;}
+.active .mail { top: 25px; transition-delay: 0.7s;}
+.active .p11 { opacity: 1; transition-duration: 1s; transition-delay: 2s;}
+
+.active .bg21 { opacity: 1; margin-left: -608px; transition-delay: 0.7s;}
+.active .bg23 { bottom: 15%; transition-delay: 0.7s;}
+.active .bg22 { margin-left: -280px; opacity: 1; transition-delay: 0.7s;}
+
+.active .p3 { margin-left: -480px; opacity: 1; transition-delay: 0.7s;}
+.active .bg31, .active .bg32 { opacity: 1; transition-delay: 1s;}
+.active .bg33 { margin-left: -120px; opacity: 1; transition-delay: 0.7s;}
+
+.active .bg41 { bottom: 15%; transition-delay: 0.7s;}
+.active .bg42 { bottom: 15%; transition-delay: 1.1s;}
+.active .bg43 { bottom: 15%; transition-delay: 0.9s;}
+
+.active .bg51 { margin-left: -501px; opacity: 1; transition-delay: 0.7s;}
+.active .bg52 { margin-left: -233px; opacity: 1; transition-delay: 0.7s;}
+.active .bg53 { margin-left: 15px; opacity: 1; transition-delay: 0.7s;}
+.active .bg54 { margin-left: 285px; opacity: 1; transition-delay: 0.7s;}
+
+.active .bg61 { top: 0; transition-delay: 0.7s;}
+.active .bg62 { left: 50%; opacity: 1; transition-delay: 0.7s;}
+.active .txt6 { left: 45%; opacity: 1; transition-delay: 0.7s;}
+
+.active .bg71 { bottom: 250px; opacity: 1; transition-delay: 0.7s;}
+.active .bg72 { bottom: 350px; opacity: 1; transition-delay: 0.9s;}
+.active .txt7 { bottom: 260px; opacity: 1; transition-delay: 1.1s;z-index:103}
+
+.active .bg82 { bottom: 260px; margin-left: -280px; opacity: 1; transition-delay: 0.7s;}
+.active .bg83 { bottom: 380px; margin-left: -430px; opacity: 1; transition-delay: 1s;}
+.active .bg84 { bottom: 420px; margin-left: -510px; opacity: 1; transition-delay: 1.2s;}
+.active .p8 { opacity: 1; transition-delay: 1.7s;}
+
+.active .bg91 { margin-left: -570px; opacity: 1; transition-delay: 0.7s;}
+.active .bg92 { opacity: 1; transition-delay: 0.8s;}
+.active .bg93 { margin-left: 230px; opacity: 1; transition-delay: 0.7s;}
+
+.active .bg102, .active .bg103 { opacity: 1; -webkit-transform:scale(1, 1); transform:scale(1, 1); transition-delay: 0.7s;}
+.active .go { top: 25%; opacity: 1; transition-delay: 1.2s;}
+
+/* for lt ie 10 */
+.ltie10 strong, .ltie10 h3 { opacity: 1; transform:scale(1, 1); transition-delay: 0.7s;}
+.ltie10 .p1 { opacity: 1; transition-delay: 1.7s;}
+
+.ltie10 .bg12 { bottom: 90px; opacity: 1; transition-delay: 0.7s; }
+.ltie10 .bg13 { bottom: 0; opacity: 1; transition-delay: 0.7s;}
+.ltie10 .hgroup { opacity: 1; transform:scale(1, 1); transition-delay: 0.7s;}
+.ltie10 .mail { top: 25px; transition-delay: 0.7s;}
+.ltie10 .p11 { opacity: 1; transition-duration: 1s; transition-delay: 2s;}
+
+.ltie10 .bg21 { opacity: 1; margin-left: -608px; transition-delay: 0.7s;}
+.ltie10 .bg23 { bottom: 15%; transition-delay: 0.7s;}
+.ltie10 .bg22 { margin-left: -280px; opacity: 1; transition-delay: 0.7s;}
+
+.ltie10 .p3 { margin-left: -480px; opacity: 1; transition-delay: 0.7s;}
+.ltie10 .bg31, .ltie10 .bg32 { opacity: 1; transition-delay: 1s;}
+.ltie10 .bg33 { margin-left: -120px; opacity: 1; transition-delay: 0.7s;}
+
+.ltie10 .bg41 { bottom: 15%; transition-delay: 0.7s;}
+.ltie10 .bg42 { bottom: 15%; transition-delay: 1.1s;}
+.ltie10 .bg43 { bottom: 15%; transition-delay: 0.9s;}
+
+.ltie10 .bg51 { margin-left: -551px; opacity: 1; transition-delay: 0.7s;}
+.ltie10 .bg52 { margin-left: -253px; opacity: 1; transition-delay: 0.7s;}
+.ltie10 .bg53 { margin-left: 45px; opacity: 1; transition-delay: 0.7s;}
+.ltie10 .bg54 { margin-left: 345px; opacity: 1; transition-delay: 0.7s;}
+
+.ltie10 .bg61 { top: 0; transition-delay: 0.7s;}
+.ltie10 .bg62 { left: 50%; opacity: 1; transition-delay: 0.7s;}
+.ltie10 .txt6 { left: 50%; opacity: 1; transition-delay: 0.7s;}
+
+.ltie10 .bg71 { bottom: 250px; opacity: 1; transition-delay: 0.7s;}
+.ltie10 .bg72 { bottom: 350px; opacity: 1; transition-delay: 0.9s;}
+.ltie10 .txt7 { bottom: 420px; opacity: 1; transition-delay: 1.1s;}
+
+.ltie10 .bg82 { bottom: 260px; margin-left: -280px; opacity: 1; transition-delay: 0.7s;}
+.ltie10 .bg83 { bottom: 380px; margin-left: -430px; opacity: 1; transition-delay: 1s;}
+.ltie10 .bg84 { bottom: 420px; margin-left: -510px; opacity: 1; transition-delay: 1.2s;}
+.ltie10 .p8 { opacity: 1; transition-delay: 1.7s;}
+
+.ltie10 .bg91 { margin-left: -570px; opacity: 1; transition-delay: 0.7s;}
+.ltie10 .bg92 { opacity: 1; transition-delay: 0.8s;}
+.ltie10 .bg93 { margin-left: 230px; opacity: 1; transition-delay: 0.7s;}
+
+.ltie10 .bg102, .ltie10 .bg103 { opacity: 1; transform:scale(1, 1); transition-delay: 0.7s;}
+.ltie10 .go { top: 25%; opacity: 1; transform:scale(1, 1); transition-delay: 1.2s;}
+.STYLE1 {color: #00CCCC}
+</style>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script>
+$(function(){
+	if($.browser.msie && $.browser.version < 10){
+		$('body').addClass('ltie10');
+	}
+	$.fn.fullpage({
+		verticalCentered: false,
+		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6', 'page7', 'page8', 'page9', 'page10'],
+		navigation: true,
+		navigationTooltips: ['', '', '', '', '', '', '', '', '', '']
+	});
+});
+</script>
+</head>
+<script>	var pc_style = ""
+	var browser = {
+	versions: function () {
+	var u = navigator.userAgent, app = navigator.appVersion;
+	return {
+	trident: u.indexOf('Trident') > -1,
+	presto: u.indexOf('Presto') > -1,
+	webKit: u.indexOf('AppleWebKit') > -1,
+	gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
+	mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/) && u.indexOf('QIHU') && u.indexOf('Chrome') < 0,
+	ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+	android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+	iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1,
+	iPad: u.indexOf('iPad') > -1,
+	webApp: u.indexOf('Safari') == -1,
+	ua: u
+	};
+	}(),
+	language: (navigator.browserLanguage || navigator.language).toLowerCase()
+	}
+	if (browser.versions.mobile && !browser.versions.iPad) {
+	this.location = "http://eqxiu.com/s/8EnEOOtS";
+	}
+</script>
+<body>
+<div class="section section1" >
+	<div class="bg"><img src="images/section1.jpg" alt=""></div>
+	<div class="bg11" ><a name="ab"></a></div>
+	<div class="bg12" ></div>
+	<div class="bg13" style="height:370px;"></div>
+
+	<div class="hgroup">
+		<h1><a href="http://www.wifimax.cn/">WIFIMAX</a></h1>
+		<h2></h2>
+	</div>
+	
+</div>
+
+<div class="section section2">
+	<div class="bg"><img src="images/section2.jpg" alt=""></div>
+	<div class="bg21"></div>
+	<div class="bg22"></div>
+	<div class="bg23"></div>
+	<strong>[ 开创移动互联网+餐饮新纪元·餐饮c2b+o2o ]</strong>
+	<h3></h3>
+	<p class="p1">国内首推餐饮C2B+O2O解决方案，打造移动互联夹智能餐厅：e掌柜智慧餐饮、凑凑移动粉丝集群平台、手机自助点餐/排队/预约/外卖系统、移动支付。告别传统：信息化水平低、口碑营销弱、就餐体验差。</p>
+</div>
+
+<div class="section section3">
+	<div class="bg"><img src="images/section3.jpg" alt=""></div>
+	<div class="bg31"></div>
+	<div class="bg32"></div>
+	<div class="bg33"></div>
+	<strong>[ 凑凑无缝对接店内e掌柜收银管理系统]</strong>
+	<h3>线下线下底层打通</h3>
+	<p class="p3">1.凑凑采用了全新的视觉化交互设计，简洁明了，用户可自助通过凑凑进行粉丝集群营销、自助店内点餐/取号排队/预约/外卖；2.店内软件本地化部署，数据安全，3秒快速点餐；3.支付宝授权合作伙伴，成功接入支付宝线下扫码支付，比传统刷卡费率更低，顾客就餐无需带钱包，让结账变成一种乐趣。</p>
+</div>
+
+<div class="section section4">
+	<div class="bg"><img src="images/section4.jpg" alt=""></div>
+	<div class="bg41"></div>
+	<div class="bg42"></div>
+	<div class="bg43"></div>
+	<strong>[百万餐饮商家明智选择 ]</strong>
+	
+	
+</div>
+
+<div class="section section5">
+	<div class="bg"><img src="images/section5.jpg" alt=""></div>
+	<strong>[ 真正能落地的餐饮互联网夹：c2b+o2o]</strong>
+	<h3>不颠覆 无未来 </h3>
+	<div class="bg51">
+		<h4>新一代点餐方式</h4>
+		<p>顾客到店凑凑自动识别店家身份,跳出手机点餐界面，轻松手机自助点餐/取号排队/预约/外卖。</p>
+	</div>
+	<div class="bg52">
+		<h4>新一代粉丝集群平台</h4>
+		<p>底层打通e掌柜和凑凑平台，让到店客户全部转化成凑凑会员，打造店家自己粉丝的栖息地。</p>
+	</div>
+	<div class="bg53">
+		<h4>“0”成本营销运营</h4>
+		<p>互联网+餐饮，酒香也怕巷子深，让凑凑粉丝会员通过社交自己帮商家引流！</p>
+	</div>
+	<div class="bg54">
+		<h4>移动支付新潮接入</h4>
+		<p>支持微信、支付宝线下移动支付，打造移动收银台，给顾客超预期的就餐体验。</p>
+	</div>
+</div>
+
+<div class="section section6">
+	<div class="bg"><img src="images/section6.jpg" alt=""></div>
+	<div class="bg61"></div>
+	<div class="bg62"></div>
+	<strong>[ 更多高端定制·手机取号·预约排队·外卖]</strong>
+	<h3></h3>
+	<div class="txt6">
+		<p>从预定开始就感受到贴心服务<br>每一位预订顾客都享受着不同的待遇，体验到贴心服务。</p>
+		<p>手机取号排队系统：等位让你有快感<br>用利益换取时间，用快感替代焦虑，等位时间正是促销广告的好时机。</p>
+		<p>把收银台变成服务中心：<br>无缝对接，订单自动提醒，呼叫服务中心，互动服务中心，主动结账中心</p>
+	</div>
+</div>
+
+<div class="section section7">
+	<div class="bg"><img src="images/section7.jpg" alt=""></div>
+	<div class="bg71" style="bottom:190px;"></div>
+	<div class="bg72"></div>
+	<div class="bg73"></div>
+	<strong>[ 现在是时候·算笔经济账了！ ]</strong>
+	<h3></h3>
+	<div class="txt7">
+		<p>每年省三个服务员：￥72000；<br>省20本纸质菜谱：￥10000；<br>省5台传统点菜宝：￥6000；<br>省营销推广费用：￥12000；<br>省pos收银手续费：￥5000；<br>
+		粗略计算每年可节省经济成本：<span class="STYLE1">￥105000</span><br>当然，通过e掌柜+凑凑的c2b运营，店家业绩能提升30%！</p>
+	</div>
+	<div class="bg74"><img src="images/bg74.png" alt=""></div>
+</div>
+
+<div class="section section8">
+	<div class="bg"><img src="images/section8.jpg" alt=""></div>
+	<div class="bg81"></div>
+	<div class="bg82"></div>
+	<div class="bg83"></div>
+	<div class="bg84"></div>
+	<strong>[ 技术.创 ]</strong>
+	<h3></h3>
+	<p class="p8"><b>硬件技术：利用一切有用的技术，开发出顾客或管理需要的各种硬件设备</b><br>
+	包括各类触摸屏、电子菜谱、收银机、扫码枪、智能路由器、盘点机、电视点菜机顶盒、网络摄像机、无线语音系统、手势遥控、厨房信息化设备、远程网络工具等。<br><br><b>软件技术：为餐饮企业建立强大的e掌柜智慧餐饮管理系统、凑凑粉丝移动平台、手机自助点餐系统、支付宝扫码支付系统、支付宝服务窗及卡券系统等。</b><br>
+	实现餐厅以顾客体验为核心，与各部门、各角色实时交互的在线支援、动态管理、高效协作与效果评估以及线上线下c2b+o2o的整套行业解决方案。</p>
+</div>
+
+<div class="section section9">
+	<div class="bg"><img src="images/section9.jpg" alt=""></div>
+	<strong>[ 三大售后服务保障 ]</strong>
+	<h3><span></span></h3>
+	<div class="bg91">
+		<p>独有的远程在线维护服务<br><br>顾客的需求，我们的宗旨，快速响应，<br>系统运营无后顾之忧。</p>
+	</div>
+	<div class="bg92">
+		<p>软硬件整体保障维护<br>自交付使用后，硬件一年内，保修包换，一年后，持续维修，软件终身使用，针对特定商家，免费送升级。</p>
+	</div>
+	<div class="bg93">
+		<p>主动的后期维护规划<br>系统安装后，外恩售后人员实时关注商家动态，主动跟踪客户使用情况，定期升级维护服务。</p>
+	</div>
+</div>
+
+<div class="section section10">
+	<div class="bg"><img src="images/section10.jpg" alt=""></div>
+	<div class="bg101"></div>
+	<div class="bg102"></div>
+	<div class="bg103"></div>
+	<a class="go" href="http://www.wifimax.cn/fuwuchuang/list3.html"  target="_blank">马上加盟</a>
+	<p class="copyright">
+
+	</p>
+</div>
+        <div class="sticky stickyright" style="display: block; z-index: 102;">
+			<ul class="menu">
+			  <li class="planet1"> 
+					<div class="icon">
+						<div></div>
+					</div>
+				  <a href="http://www.wifimax.cn/" target="_blank">公司官网</a>				</li>
+				<li class="planet2"> 
+					<div class="icon">
+						<div></div>
+					</div> 
+				<a href="#page1">智慧餐饮</a>				</li>
+			  <li class="planet3"> 
+					<div class="icon">
+						<div></div>
+					</div> 
+				  <a href="http://www.wifimax.cn/info/hardware.html" target="_blank">餐饮硬件</a>				</li>
+			  <li class="planet4"> 
+					<div class="icon">
+						<div></div>
+					</div> 
+				  <a href="http://www.wifimax.cn/info/soft.html" target="_blank">餐饮软件</a>				</li>
+			  <li class="planet5"> 
+					<div class="icon">
+						<div></div>
+					</div> 
+				  <a href="http://www.wifimax.cn/info/news.html" target="_blank">成功案例</a>				</li>
+				<li class="planet6"> 
+					<div class="icon">
+						<div></div>
+					</div> 
+					<a href="http://www.wifimax.cn/fuwuchuang/list3.html" target="_blank">加盟代理</a>				</li>
+				<li class="planet7"> 
+					<div class="icon">
+						<div></div>
+					</div> 
+					<a href="http://www.wifimax.cn/info/contact.html" target="_blank">联系我们</a>				</li>
+			</ul>
+			<div class="clr"></div>
+		</div>
+</body>
+</html>
