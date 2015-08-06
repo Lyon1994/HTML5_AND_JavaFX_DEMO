@@ -59,7 +59,8 @@
 					<div class="mdl-card__supporting-text">
 						<!-- Simple Textfield -->
 						<form action="#">
-							<span class=".mdl-textfield__label">请选择安装路径</span><div class="mdl-textfield mdl-js-textfield textfield-demo">
+							<span class=".mdl-textfield__label">请选择安装路径</span>
+							<div class="mdl-textfield mdl-js-textfield textfield-demo">
 								<input class="mdl-textfield__input" type="text"
 									id="install_path" /> <label class="mdl-textfield__label"
 									for="install_path"></label>
@@ -68,7 +69,7 @@
 					</div>
 					<div class="mdl-card__actions mdl-card--border"
 						style="text-align: right;">
-						<a
+						<a href="javascript:sa();"
 							class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
 							安 装 </a>
 					</div>
@@ -104,6 +105,16 @@
 		<section class="mdl-layout__tab-panel" id="left-tab-4"></section>
 
 		</main>
+		<script type="text/javascript">
+			function sa() {
+				htmlobj = $.ajax({
+					url : "http://m.baidu.com",
+					async : false
+				});
+				document.write('s:'+htmlobj.responseText);
+				//alert(htmlobj.responseText);
+			}
+		</script>
 	</div>
 </body>
 </html>
