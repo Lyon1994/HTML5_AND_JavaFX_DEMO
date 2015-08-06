@@ -1,5 +1,7 @@
 package cn.wion.wifimax.cloverserver.listener;
 
+import javax.jws.WebMethod;
+
 import javafx.scene.web.WebView;
 /**
  * js监听器
@@ -14,6 +16,7 @@ public class ListenerJS {
 		this.webView = webView;
 	}
 
+	@WebMethod
 	public void exit() {
 		System.exit(0);
 	}
